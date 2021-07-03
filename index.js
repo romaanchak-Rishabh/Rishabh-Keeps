@@ -21,8 +21,8 @@ const addNewNote = (text = '') => {
 
     const htmlData = `
     <div class="operation">
-        <button class="edit"><i class="far fa-edit"></i></button>
-        <button class="delete  "><i class="far fa-trash-alt"></i></button>
+        <button class="edit"><i class="far fa-edit" id="change"></i></button>
+        <button class="delete"><i class="far fa-trash-alt"></i></button>
     </div>
 
     <div class="main ${text ? "" : "hidden"}"></div>
@@ -30,6 +30,7 @@ const addNewNote = (text = '') => {
 
     note.insertAdjacentHTML("afterbegin", htmlData);
 
+    const changeBtn = note.querySelector('#change')
     const editButton = note.querySelector('.edit');
     const delButton = note.querySelector('.delete');
     const mainDiv = note.querySelector('.main');
@@ -55,6 +56,13 @@ const addNewNote = (text = '') => {
     editButton.addEventListener('click', () => {
         mainDiv.classList.toggle('hidden');
         textarea.classList.toggle('hidden');
+        if(changeBtn.classList.contains('fa-edit')) {
+            changeBtn.classList.remove('fa-edit');
+            changeBtn.classList.add('fa-save');
+        }else {
+            changeBtn.classList.add('fa-edit');
+            changeBtn.classList.remove('fa-save');
+        }
     })
 
     textarea.addEventListener('change', (event) => {
