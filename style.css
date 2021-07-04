@@ -107,7 +107,7 @@ body {
     align-items: center;
     transition: 0.2s linear;
     position: relative;
-    right: 0.97rem;
+    right: 1.35rem;
 
 }
 
@@ -238,9 +238,5 @@ body {
         background-color: #e74c3c;
         color: #fff;
         filter: drop-shadow(0 1rem 0.8rem rgb(219, 218, 218));
-    }
-    
-    .circle {
-        right: 1.3rem;
     }
 }
