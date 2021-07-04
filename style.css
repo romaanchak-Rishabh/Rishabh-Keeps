@@ -50,10 +50,10 @@ body {
 .more {
     border: none;
     border-radius: 8rem;
-    width: 11.3rem;
+    width: 11.5rem;
     height: 3.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     cursor: pointer;
     background: linear-gradient(to right, #27ae60 50%, transparent 50%);
@@ -107,7 +107,8 @@ body {
     align-items: center;
     transition: 0.2s linear;
     position: relative;
-    right: .25rem;
+    right: 0.97rem;
+
 }
 
 .note {
